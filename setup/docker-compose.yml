@@ -5,7 +5,8 @@ services:
     image: apache-setup:latest
     build:
       context: .
-    ports: "80:80"
+    ports:
+      - "80:80"
     volumes:
       - ./httpd.conf:/etc/apache2/httpd.conf
       - ./html:/var/www/localhost/htdocs/
