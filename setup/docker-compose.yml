@@ -9,10 +9,6 @@ services:
     volumes:
       - ./httpd.conf:/etc/apache2/httpd.conf
       - ./html:/var/www/localhost/htdocs/
-    networks:
-      - proxy
-    environment: SERVER=waspscripts.com
-
-networks:
-  proxy:
-    driver: bridge
+    environment:
+      - USER=torwent
+      - SERVER=waspscripts.com
