@@ -1,0 +1,10 @@
+sudo docker run -it --rm \
+-v /docker/etc/letsencrypt:/etc/letsencrypt \
+-v /docker/var/lib/letsencrypt:/var/lib/letsencrypt \
+-v $PWD/html:/data/letsencrypt \
+-v /docker/var/log/letsencrypt:/var/log/letsencrypt \
+certbot/certbot \
+certonly --webroot \
+--email torwent@waspscripts.com --agree-tos --no-eff-email \
+--webroot-path=/data/letsencrypt \
+-d waspscripts.com -d www.waspscripts.com -d dev.waspscripts.com -d wasp.waspscripts.com
