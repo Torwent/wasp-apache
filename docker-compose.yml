@@ -18,11 +18,11 @@ services:
       - /docker/etc/letsencrypt/live/waspscripts.com/privkey.pem:/etc/letsencrypt/live/waspscripts.com/privkey.pem
       - /docker/server/logs/:/var/www/logs/
     networks:
-      - proxy
+      - wasp-proxy
     environment:
       - USER=torwent
       - SERVER=waspscripts.com
 
 networks:
-  proxy:
+  wasp-proxy:
     driver: bridge
