@@ -25,4 +25,4 @@ services:
 
 networks:
   wasp-proxy:
-    driver: bridge
+    external: true
