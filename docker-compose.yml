@@ -6,6 +6,7 @@ services:
     image: apache:latest
     build:
       context: .
+    restart: unless-stopped
     ports:
       - "80:80"
       - "443:443"
