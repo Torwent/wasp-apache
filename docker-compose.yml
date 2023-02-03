@@ -20,9 +20,9 @@ services:
     networks:
       - wasp-proxy
     environment:
-      - USER=torwent
-      - SERVER=waspscripts.com
-      - PASSWORD=helloworld
+      - USER=${USER}
+      - SERVER=${SERVER}
+      - PASSWORD=${PASSWORD}
 
 networks:
   wasp-proxy:
