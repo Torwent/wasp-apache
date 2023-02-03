@@ -12,7 +12,6 @@ services:
       - "443:443"
     volumes:
       - ./httpd.conf:/etc/apache2/httpd.conf
-      - ./.htpasswd:/etc/apache2/.htpasswd
       - ./html/:/var/www/html/
       - /docker/etc/letsencrypt/live/waspscripts.com/cert.pem:/etc/letsencrypt/live/waspscripts.com/cert.pem
       - /docker/etc/letsencrypt/live/waspscripts.com/fullchain.pem:/etc/letsencrypt/live/waspscripts.com/fullchain.pem
