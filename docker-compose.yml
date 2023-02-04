@@ -1,8 +1,8 @@
 version: "3.9"
 
 services:
-  wasp-apache:
-    container_name: "wasp-apache"
+  wasp-server:
+    container_name: "wasp-server"
     image: apache:latest
     build:
       context: .
@@ -19,8 +19,10 @@ services:
       - /docker/server/logs/:/var/www/logs/
     networks:
       - wasp-proxy
-    env_file:
-      - .env
+    environment:
+      - USER=${USER}
+      - SERVER=${SERVER}
+      - PASSWORD=${PASSWORD}
 
 networks:
   wasp-proxy:
