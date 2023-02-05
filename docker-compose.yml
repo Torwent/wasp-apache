@@ -6,6 +6,9 @@ services:
     image: apache:latest
     build:
       context: .
+      args:
+        USERNAME: $USERNAME
+        PASSWORD: $PASSWORD
     restart: unless-stopped
     ports:
       - "80:80"
