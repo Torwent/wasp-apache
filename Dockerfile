@@ -1,4 +1,6 @@
 FROM alpine:latest
+ARG USERNAME
+ARG PASSWORD
 LABEL author="Torwent"
 ENV server_name=localhost
 RUN apk add --no-cache apache2-ssl
